@@ -1,0 +1,40 @@
+{
+  "name": "pkgman",
+  "version": "1.0.0",
+  "description": "A CLI-based package management system built with Node.js",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "pkgman": "./bin/cli.js"
+  },
+  "scripts": {
+    "start": "node bin/cli.js",
+    "dev": "node bin/cli.js",
+    "lint": "eslint src/ bin/",
+    "test": "echo \"No tests configured\" && exit 0",
+    "docker:build": "docker build -t pkgman .",
+    "docker:run": "docker run -it --rm pkgman"
+  },
+  "keywords": [
+    "cli",
+    "package-manager",
+    "npm",
+    "dependencies"
+  ],
+  "author": "IUC Student",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.13.6",
+    "boxen": "^8.0.1",
+    "chalk": "^5.6.2",
+    "cli-table3": "^0.6.3",
+    "commander": "^14.0.3",
+    "express": "^5.2.1",
+    "inquirer": "^13.3.2",
+    "ora": "^9.3.0",
+    "semver": "^7.5.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
